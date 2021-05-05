@@ -1,0 +1,41 @@
+﻿  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div>
+		<button type="button" name="show_more" id="pText" onclick="changeText()">Start</button>
+	</div>
+	<div class="slider">
+		<script>
+			let photos = ["/images/1.png", "/images/2.jpg", "/images/3.jpg","/images/4.jpg"];
+			for (let i = 0; i < photos.length; i++) {
+				document.write('<div class="item">');
+				let line=photos[i];
+				document.write(`<img src="${line}">`);
+				document.write('</div>');
+			}
+
+			document.write('<div class="slider-dots">');
+			for (let i = 1; i <= photos.length; i++) {
+				document.write('<span class="slider-dots_item" onclick="currentSlide(${i})"></span> ');
+			}
+			document.write('</div>');
+		</script>
+		
+		<a class="prev" onclick="minusSlide()">&#10094;</a>
+		<a class="next" onclick="plusSlide()">&#10095;</a>
+		<p>Soler of Astora</p>
+	</div>
+	<br>
+
+<script src="script.js"></script>  
+<script src="keyAnalize.js"></script>  
+
+</body>
+</html>
